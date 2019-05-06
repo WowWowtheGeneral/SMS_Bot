@@ -12,7 +12,7 @@ class MyClient(discord.Client):
             return
 
         if message.content == 's!test':
-            await message.channel.send('You have not failed')
+            await message.channel.send('You have not failed') 
 
 client = MyClient()
 client.run(TOKEN)
