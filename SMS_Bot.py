@@ -1,6 +1,8 @@
 import discord
 
-TOKEN = 'NTc0MzY4NjcxODI1MjY0NjYw.XM8jhg.u3oBq4gzqT-p0WbbS4XQA7SxKq8'
+with open('TOKEN.txt', 'r') as f:
+    TOKEN = f.readline()
+    f.close()
 
 class MyClient(discord.Client):
     async def on_ready(self):
