@@ -18,6 +18,10 @@ class MyClient(discord.Client):
 
         if 'kevin' in message.content.lower():
          await message.channel.send('He has arrived!')
+        
+        if message.content.lower() == 's!supervan':
+            await message.channel.send("It's a bird! It's a plane! No, it's SUPERVAN!")
+            await message.channel.send('https://vimeo.com/83319818')
 
 client = MyClient()
 client.run(TOKEN)
