@@ -1,26 +1,33 @@
 import discord
+from discord.ext import commands
 
 with open('TOKEN.txt', 'r') as f:
     TOKEN = f.readline()
     f.close()
 
-class MyClient(discord.Client):
-    async def on_ready(self):
-        print('Logged on as', self.user)
+description = '''SMS Bot'''
+    
+    
+bot = commands.bot(command_prefix='s!', description=description)
 
-    async def on_message(self, message):
-        # don't respond to ourselves
-        if message.author == self.user:
-            return
+@bot.event()
+async def on_ready(self):
+    print('Logged in as')
+    print(bot.user.name)
+    print(bot.user.id)
+    print('------')
 
-        if message.content.lower() == 's!test':
-            await message.channel.send('You have not failed')
+@bot.command(name = 'test', description = "You are already dead...")
+async def test(ctx):
+    await ctx.send('You have not failed')
 
-        if 'kevin' in message.content.lower():
-         await message.channel.send('He has arrived! Everyone must bow down.'
-                                    
-        if message.content.lower() == ('s!supervan'):
-          await message.channel.send("It's a bird. It's a plane. No... It's SuperVan!\nhttps://vimeo.com/83319818')
+@bot.command(name = 'supervan', description = "It's a bird...")
+async def supervan(ctx):
+    await message.channel.send("It's a bird. It's a plane. No... It's SuperVan!\nhttps://vimeo.com/83319818')
+
+@bot.event
+async def on_message(message):
+    if 'kevin' in message.content.lower():
+        await message.channel.send('He has arrived! Everyone must bow down.')
                                      
-client = MyClient()
-client.run(TOKEN)
+bot.run(TOKEN)
