@@ -13,8 +13,11 @@ class MyClient(discord.Client):
         if message.author == self.user:
             return
 
-        if message.content == 's!test':
-            await message.channel.send('You have not failed') 
+        if message.content.lower() == 's!test':
+            await message.channel.send('You have not failed')
+
+        if 'kevin' in message.content.lower():
+         await message.channel.send('He has arrived!')
 
 client = MyClient()
 client.run(TOKEN)
