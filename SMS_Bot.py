@@ -17,7 +17,7 @@ class MyClient(discord.Client):
             await message.channel.send('You have not failed')
 
         if 'kevin' in message.content.lower():
-         await message.channel.send('He has arrived!')
+         await message.channel.send('He has arrived! Everyone must bow down.')
 
 client = MyClient()
 client.run(TOKEN)
