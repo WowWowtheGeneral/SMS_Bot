@@ -3,7 +3,7 @@ from discord.ext import commands
 
 with open('TOKEN.txt', 'r') as f:
     TOKEN = f.readline()
-    f.close()
+    f.close() 
 
 description = '''SMS Bot'''
 
