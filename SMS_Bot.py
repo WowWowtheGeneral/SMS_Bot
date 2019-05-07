@@ -24,15 +24,15 @@ async def test(ctx):
 
 @bot.command(name = 'supervan', description = "It's a bird...")
 async def supervan(ctx):
-    await message.channel.send("It's a bird. It's a plane. No... It's SuperVan!\nhttps://vimeo.com/83319818')
-
+    await message.channel.send("It's a bird. It's a plane. No... It's SuperVan!\nhttps://vimeo.com/83319818")
+                               
 @bot.event
 async def on_message(message):
                                
     if 'kevin' in message.content.lower():
         await message.channel.send('He has arrived! Everyone must bow down.')
                                
-    if any([w message.content.lower() for UNHOLY_WORDS]):
+    if any([message.content.lower() for UNHOLY_WORDS]):
         await message.channel.send('Woah there buddy! Those words are infernal! You must change your ways and correct your sins. Go here to correct your errors, or the holy beings will disregard you for eternity.\nhttps://docs.google.com/document/d/10x45DFUNA1U0pE8ZYKLO64w_4y6fNGFH9B6M6tlMU3Q/edit') 
                                
 bot.run(TOKEN)
