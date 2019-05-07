@@ -17,7 +17,10 @@ class MyClient(discord.Client):
             await message.channel.send('You have not failed')
 
         if 'kevin' in message.content.lower():
-         await message.channel.send('He has arrived! Everyone must bow down.')
-
+         await message.channel.send('He has arrived! Everyone must bow down.'
+                                    
+        if message.content.lower() == ('s!supervan'):
+          await message.channel.send("It's a bird. It's a plane. No... It's SuperVan!\nhttps://vimeo.com/83319818')
+                                     
 client = MyClient()
 client.run(TOKEN)
