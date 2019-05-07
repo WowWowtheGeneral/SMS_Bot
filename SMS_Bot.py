@@ -26,7 +26,7 @@ async def test(ctx):
 async def supervan(ctx):
     await message.channel.send("It's a bird. It's a plane. No... It's SuperVan!\nhttps://vimeo.com/83319818')
 
-@bot.event
+@bot.event()
 async def on_message(message):
                                
     if 'kevin' in message.content.lower():
