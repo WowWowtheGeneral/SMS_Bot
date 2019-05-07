@@ -7,7 +7,7 @@ with open('TOKEN.txt', 'r') as f:
 
 description = '''SMS Bot'''
 
-unholy_word_list = ['Airpods', 'Juul', 'Hats', 'Legs', 'Macbooks', 'Weed', 'Cell Phones', 'Bar Mtizvah', 'Bat Mitzvah', 'Kazoos', 'Flip-Flops', 'Spoons', 'Forks', 'Fuck', 'Shit', 'Ass', 'Asshole', 'Dick', 'Bitch']
+UNHOLY_WORDS = ['airpods', 'juul', 'hat', 'leg', 'macbook', 'weed', 'phone', 'mitzvah', 'kazoo', 'sandals', 'spoon', 'fork', 'fuck', 'shit', 'ass', 'dick', 'bitch']
     
 bot = commands.bot(command_prefix='s!', description=description)
 
@@ -28,12 +28,11 @@ async def supervan(ctx):
 
 @bot.event
 async def on_message(message):
+                               
     if 'kevin' in message.content.lower():
         await message.channel.send('He has arrived! Everyone must bow down.')
-
-@bot.event
-async def on_message(message):
-    if (unholy_word_list) in message.content.lower():
+                               
+    if any([w message.content.lower() for UNHOLY_WORDS]):
         await message.channel.send('Woah there buddy! Those words are infernal! You must change your ways and correct your sins. Go here to correct your errors, or the holy beings will disregard you for eternity.\nhttps://docs.google.com/document/d/10x45DFUNA1U0pE8ZYKLO64w_4y6fNGFH9B6M6tlMU3Q/edit') 
                                
 bot.run(TOKEN)
