@@ -7,7 +7,7 @@ with open('TOKEN.txt', 'r') as f:
 
 description = '''SMS Bot'''
 
-UNHOLY_WORDS = ['airpods', 'juul', 'hat', 'leg', 'macbook', 'weed', 'phone', 'mitzvah', 'kazoo', 'sandals', 'spoon', 'heck', 'hell', 'fork', 'fuck', 'shit', 'ass', 'dick', 'bitch']
+UNHOLY_WORDS = ['airpods', 'juul', 'hat', 'leg', 'macbook', 'weed', 'phone', 'mitzvah', 'kazoo', 'sandals', 'spoon', 'amos', 'heck', 'hell', 'fork', 'fuck', 'shit', 'ass', 'dick', 'bitch']
     
 bot = commands.bot(command_prefix='s!', description=description)
 
