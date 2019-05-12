@@ -7,11 +7,11 @@ with open('TOKEN.txt', 'r') as f:
 
 description = '''SMS Bot'''
 
-UNHOLY_WORDS = ['airpods', 'juul', 'hat', 'leg', 'macbook', 'weed', 'phone', 'mitzvah', 'kazoo', 'sandals', 'spoon', 'fork', 'fuck', 'shit', 'ass', 'dick', 'bitch']
+UNHOLY_WORDS = ['airpods', 'juul', 'hat', 'leg', 'macbook', 'weed', 'phone', 'mitzvah', 'kazoo', 'sandals', 'spoon', 'amos', 'heck', 'hell', 'fork', 'fuck', 'shit', 'ass', 'dick', 'bitch']
     
-bot = commands.bot(command_prefix='s!', description=description)
+bot = commands.Bot(command_prefix='s!', description=description)
 
-@bot.event()
+@bot.event
 async def on_ready(self):
     print('Logged in as')
     print(bot.user.name)
@@ -33,8 +33,8 @@ async def on_message(message):
 
 
 @bot.event
-async def on_message(message):                                            
-    if any([w message.content.lower() for w UNHOLY_WORDS]):
+async def on_message(message):                                                                        
+    if any([w in message.content.lower() for w in UNHOLY_WORDS]):
         await message.channel.send('Woah there buddy! Those words are infernal! You must change your ways and correct your sins. Go here to correct your errors, or the holy beings will disregard you for eternity.\nhttps://docs.google.com/document/d/10x45DFUNA1U0pE8ZYKLO64w_4y6fNGFH9B6M6tlMU3Q/edit') 
                                
 bot.run(TOKEN)
