@@ -24,7 +24,7 @@ async def test(ctx):
 
 @bot.command(name = 'supervan', description = "It's a bird...")
 async def supervan(ctx):
-    await message.channel.send("It's a bird. It's a plane. No... It's SuperVan!\nhttps://vimeo.com/83319818")
+    await ctx.send("It's a bird. It's a plane. No... It's SuperVan!\nhttps://vimeo.com/83319818")
 
 @bot.event
 async def on_message(message):                                                                        
