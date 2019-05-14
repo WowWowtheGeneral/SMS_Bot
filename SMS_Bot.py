@@ -3,7 +3,6 @@ from discord.ext import commands
 
 with open('TOKEN.txt', 'r') as f:
     TOKEN = f.readline()
-    f.close() 
 
 description = '''SMS Bot'''
 
@@ -32,5 +31,6 @@ async def on_message(message):
         await message.channel.send('He has arrived! Everyone must bow down.')
     if any([w in message.content.lower() for w in UNHOLY_WORDS  ]):
         await message.channel.send('Woah there buddy! Those words are infernal! You must change your ways and correct your sins. Go here to correct your errors, or the holy beings will disregard you for eternity.\nhttps://docs.google.com/document/d/10x45DFUNA1U0pE8ZYKLO64w_4y6fNGFH9B6M6tlMU3Q/edit')
+    await bot.process_commands(message)
                                
 bot.run(TOKEN)
