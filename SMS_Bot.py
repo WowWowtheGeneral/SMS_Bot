@@ -10,7 +10,8 @@ DESCRIPTION = '''SMS Bot'''
 
 UNHOLY_WORDS = ['airpods', 'juul', ' hat', 'leg', 'macbook', 'weed', 'phone', 'mitzvah', 'kazoo', 'sandals', 'spoon', 'amos', 'heck', 'hell', 'fork', 'wtf', 'fuck', 'shit', 'ass', 'dick', 'bitch']
 
-QUOTES = ['When something goes down it sinks\n-Lisa Scarborough', 'quotes', 'here']
+QUOTES = ['When something goes down it sinks\n-Ms. Scarborough', 'It would be sort of like the reverse of blowing your nose.\n-Mr. Warren',
+"So your sibling built this whole big tower, then you step in and knock it down. It's really good if you can get it on slo-mo camera, you know, perfectly capture the horror on their face... Ah, It's these things that just make me feel alive.\n-Mr.Warren"]
     
 bot = commands.Bot(command_prefix='s!', description=DESCRIPTION)
 
