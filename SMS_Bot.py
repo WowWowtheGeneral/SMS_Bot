@@ -10,7 +10,7 @@ DESCRIPTION = '''SMS Bot'''
 
 UNHOLY_WORDS = ['airpods', 'juul', ' hat', 'leg', 'macbook', 'weed', 'phone', 'mitzvah', 'kazoo', 'sandals', 'spoon', 'amos', 'heck', 'hell', 'fork', 'wtf', 'fuck', 'shit', 'ass', 'dick', 'bitch']
 
-QUOTES = 
+QUOTES = ['insert', 'quotes', 'here']
     
 bot = commands.Bot(command_prefix='s!', description=description)
 
