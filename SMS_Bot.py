@@ -33,7 +33,8 @@ async def supervan(ctx):
     
 @bot.command(name = 'thought', description = "Ms. Clarke's thought of the day")
 async def thought(ctx):
-    await ctx.send(random.choice(QUOTES))
+        await ctx.send('Here is a thought of the day!\n')
+        await ctx.send(random.choice(QUOTES))
 
 @bot.event
 async def on_message(message):                                                                        
