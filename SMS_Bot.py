@@ -31,13 +31,7 @@ async def supervan(ctx):
     
 @bot.command(name = 'thought', description = "Ms. Clarke's thought of the day")
 async def thought(ctx):
-    choicepicked = random.randint(0, len(QUOTES) - 1)
-    i = 0
-    for x in QUOTES:
-        if choicepicked == i:
-            await ctx.send(x)
-            break
-        i += 1
+    await ctx.send(random.choice(QUOTES))
 
 @bot.event
 async def on_message(message):                                                                        
