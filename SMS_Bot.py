@@ -12,7 +12,7 @@ UNHOLY_WORDS = ['airpods', 'juul', ' hat', 'leg', 'macbook', 'weed', 'phone', 'm
 
 QUOTES = ['When something goes down it sinks\n-Lisa Scarborough', 'quotes', 'here']
     
-bot = commands.Bot(command_prefix='s!', description='description')
+bot = commands.Bot(command_prefix='s!', description=DESCRIPTION)
 
 @bot.event
 async def on_ready():
