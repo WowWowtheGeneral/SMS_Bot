@@ -35,7 +35,7 @@ async def test(ctx):
 async def supervan(ctx):
     await ctx.send("It's a bird. It's a plane. No... It's SuperVan!\nhttps://vimeo.com/83319818")
     
-@bot.command(name = 'thought', description = "Ms. Clarke's thought of the day")
+@bot.command(name = 'quote', description = "Ms. Clarke's thought of the day")
 async def thought(ctx):
         await ctx.send('Here is a thought of the day!\n')
         await ctx.send(random.choice(QUOTES))
