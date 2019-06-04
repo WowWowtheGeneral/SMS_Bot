@@ -10,10 +10,13 @@ DESCRIPTION = '''SMS Bot'''
 
 UNHOLY_WORDS = ['airpods', 'juul', ' hat', 'leg', 'macbook', 'weed', 'phone', 'mitzvah', 'kazoo', 'sandals', 'spoon', 'amos', ' heck', 'hell', 'fork', 'wtf', 'fuck', 'shit', 'ass', 'dick', 'bitch']
 
-QUOTES = ['When something goes down it sinks\n-Ms. Scarborough', 'It would be sort of like the reverse of blowing your nose.\n-Mr. Warren',
-"So your sibling built this whole big tower, then you step in and knock it down. It's really good if you can get it on slo-mo camera, you know, perfectly capture the horror on their face... Ah, It's these things that just make me feel alive.\n-Mr.Warren"
-, 'Cha Cha YaYa\n-Mrs. Belcher', 'Stop it. Stop it now.\n-Mrs. Belcher', 'Jiminy cricket!\n-Mrs. Belcher', 'Do you want to get your sister *wet* ... with the *HOES*\n-Ms. Scarborough', "I can't hear you, the sun's in my eyes\n-Ms. Grefe"
-, "That's not how best friends treat each other\n-Ms. Scarborough"]
+with open('QUOTES.txt', 'r') as f:
+    QUOTES = f.readlines()
+    for quote in QUOTES:
+        if quote.endswith('\n'):
+            num = QUOTES.index(quote)
+            quote = quote[:-1]
+            QUOTES[num] = quote
     
 bot = commands.Bot(command_prefix='s!', description=DESCRIPTION)
 
