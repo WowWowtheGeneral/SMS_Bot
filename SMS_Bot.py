@@ -12,7 +12,7 @@ UNHOLY_WORDS = ['airpods', 'juul', ' hat', 'leg', 'macbook', 'weed', 'phone', 'm
 
 QUOTES = ['When something goes down it sinks\n-Ms. Scarborough', 'It would be sort of like the reverse of blowing your nose.\n-Mr. Warren',
 "So your sibling built this whole big tower, then you step in and knock it down. It's really good if you can get it on slo-mo camera, you know, perfectly capture the horror on their face... Ah, It's these things that just make me feel alive.\n-Mr.Warren"
-    , 'Cha Cha YaYa\n-Mrs. Belcher', 'Stop it. Stop it now.\n-Mrs. Belcher', 'Jiminy cricket!\n-Mrs. Belcher']
+, 'Cha Cha YaYa\n-Mrs. Belcher', 'Stop it. Stop it now.\n-Mrs. Belcher', 'Jiminy cricket!\n-Mrs. Belcher']
     
 bot = commands.Bot(command_prefix='s!', description=DESCRIPTION)
 
