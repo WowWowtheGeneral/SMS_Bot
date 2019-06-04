@@ -10,7 +10,7 @@ DESCRIPTION = '''SMS Bot'''
 
 UNHOLY_WORDS = ['airpods', 'juul', ' hat', 'leg', 'macbook', 'weed', 'phone', 'mitzvah', 'kazoo', 'sandals', 'spoon', 'amos', ' heck', 'hell', 'fork', 'wtf', 'fuck', 'shit', 'ass', 'dick', 'bitch']
 
-with open('QUOTES.txt', 'r') as f:
+with open('data/QUOTES.txt', 'r') as f:
     QUOTES = f.readlines()
     for quote in QUOTES:
         if quote.endswith('\n'):
