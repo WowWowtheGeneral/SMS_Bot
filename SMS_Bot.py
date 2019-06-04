@@ -8,7 +8,13 @@ with open('TOKEN.txt', 'r') as f:
 
 DESCRIPTION = '''SMS Bot'''
 
-UNHOLY_WORDS = ['airpods', 'juul', ' hat', 'leg', 'macbook', 'weed', 'phone', 'mitzvah', 'kazoo', 'sandals', 'spoon', 'amos', ' heck', 'hell', 'fork', 'wtf', 'fuck', 'shit', 'ass', 'dick', 'bitch']
+with open('data/UNHOLY_WORDS.txt', 'r') as f:
+    UNHOLY_WORDS = f.readlines()
+    for word in UNHOLY_WORDS:
+        if word.endswith('\n'):
+            num = UNHOLY_WORDS.index(word)
+            word = word[:-1]
+            UNHOLY_WORDS[num] = word
 
 with open('data/QUOTES.txt', 'r') as f:
     QUOTES = f.readlines()
