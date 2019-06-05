@@ -4,3 +4,8 @@ Here are all of the SMS Bot commands, and what they do.
 
 s!supervan
   The supervan command will send you a link to the Supervan video on Vimeo.
+
+s!quote
+  The quote command will send you a quote that an SMS teacher has said, that honestly, is really stupid. 
+
+Hopefully we have more to come! Thanks for using the SMS Bot.
