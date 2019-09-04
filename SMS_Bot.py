@@ -23,8 +23,6 @@ with open('data/QUOTES.txt', 'r') as f:
             num = QUOTES.index(quote)
             quote = quote[:-1]
             QUOTES[num] = quote
- 
-with open('data/HELP.txt', 'r') as f:
     
 bot = commands.Bot(command_prefix='s!', description=DESCRIPTION)
 
